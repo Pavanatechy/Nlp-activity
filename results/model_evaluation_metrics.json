@@ -1,0 +1,116 @@
+{
+    "dataset_summary": {
+        "total_records": 200,
+        "toxic_records": 107,
+        "non_toxic_records": 93,
+        "train_size": 160,
+        "test_size": 40,
+        "test_toxic": 21,
+        "test_non_toxic": 19,
+        "vocabulary_size": 764
+    },
+    "selected_model": {
+        "name": "Logistic Regression",
+        "justification": "Logistic Regression achieves higher precision (70.83% vs 64.29%) and higher overall F1-score (75.56% vs 73.47%) on the test set, substantially reducing false positive errors in moderation."
+    },
+    "models": {
+        "Logistic Regression": {
+            "name": "Logistic Regression",
+            "accuracy": 0.725,
+            "toxic_precision": 0.7083333333333334,
+            "toxic_recall": 0.8095238095238095,
+            "toxic_f1": 0.7555555555555555,
+            "macro_f1": 0.7206349206349206,
+            "tp": 17,
+            "tn": 12,
+            "fp": 7,
+            "fn": 4,
+            "confusion_matrix": [
+                [
+                    12,
+                    7
+                ],
+                [
+                    4,
+                    17
+                ]
+            ],
+            "classification_report": {
+                "Non-Toxic (0)": {
+                    "precision": 0.75,
+                    "recall": 0.631578947368421,
+                    "f1-score": 0.6857142857142857,
+                    "support": 19.0
+                },
+                "Toxic (1)": {
+                    "precision": 0.7083333333333334,
+                    "recall": 0.8095238095238095,
+                    "f1-score": 0.7555555555555555,
+                    "support": 21.0
+                },
+                "accuracy": 0.725,
+                "macro avg": {
+                    "precision": 0.7291666666666667,
+                    "recall": 0.7205513784461153,
+                    "f1-score": 0.7206349206349206,
+                    "support": 40.0
+                },
+                "weighted avg": {
+                    "precision": 0.728125,
+                    "recall": 0.725,
+                    "f1-score": 0.7223809523809523,
+                    "support": 40.0
+                }
+            }
+        },
+        "Multinomial Naive Bayes": {
+            "name": "Multinomial Naive Bayes",
+            "accuracy": 0.675,
+            "toxic_precision": 0.6428571428571429,
+            "toxic_recall": 0.8571428571428571,
+            "toxic_f1": 0.7346938775510204,
+            "macro_f1": 0.6576695194206715,
+            "tp": 18,
+            "tn": 9,
+            "fp": 10,
+            "fn": 3,
+            "confusion_matrix": [
+                [
+                    9,
+                    10
+                ],
+                [
+                    3,
+                    18
+                ]
+            ],
+            "classification_report": {
+                "Non-Toxic (0)": {
+                    "precision": 0.75,
+                    "recall": 0.47368421052631576,
+                    "f1-score": 0.5806451612903226,
+                    "support": 19.0
+                },
+                "Toxic (1)": {
+                    "precision": 0.6428571428571429,
+                    "recall": 0.8571428571428571,
+                    "f1-score": 0.7346938775510204,
+                    "support": 21.0
+                },
+                "accuracy": 0.675,
+                "macro avg": {
+                    "precision": 0.6964285714285714,
+                    "recall": 0.6654135338345865,
+                    "f1-score": 0.6576695194206715,
+                    "support": 40.0
+                },
+                "weighted avg": {
+                    "precision": 0.69375,
+                    "recall": 0.675,
+                    "f1-score": 0.661520737327189,
+                    "support": 40.0
+                }
+            }
+        }
+    }
+}
